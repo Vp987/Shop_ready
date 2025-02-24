@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 180px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Product Grid */
+.product-grid {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+/* Scrollable Area */
+.grid-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.description {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.product:hover .description {
+    opacity: 1;
+    visibility: visible;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
